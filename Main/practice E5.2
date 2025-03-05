@@ -1,0 +1,22 @@
+package E5;
+import java.util.Scanner;
+public class practice {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a floating number: ");
+        double number = scanner.nextDouble();
+        scanner.close();
+        if (number==0){
+            System.out.println("Zero!");
+        } else if (number>1) {
+            System.out.println("Positive!");
+        } else if (number<0) {
+            System.out.println("Negative!");
+        }
+        if (Math.abs(number)<1){
+            System.out.println("Small!!!");
+        } else if (Math.abs(number)>1000000) {
+            System.out.println("Large!!!");
+        }
+    }
+}
