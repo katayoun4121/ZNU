@@ -2,11 +2,13 @@ package E5;
 import java.util.Scanner;
 public class practice1 {
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a word: ");
-        String word = scanner.nextLine();
-        String reversedWord = new StringBuilder(word).reverse().toString();
-        System.out.println("Reversed word: " +reversedWord);
-        scanner.close();
+        System.out.println("multiplication table: ");
+        System.out.println("--------------------------");
+        for(int i =1;i<=10;i++){
+            for (int j=1 ;j<=10; j++){
+                System.out.printf("%5d",i*j);
+            }
+            System.out.println();
+        }
     }
 }
