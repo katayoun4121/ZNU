@@ -6,10 +6,7 @@ public class practice {
         System.out.println("enter a string: ");
         String input = scanner.nextLine();
         scanner.close();
-        StringBuilder result = new StringBuilder();
-        for(int i=0;i<input.length();i+=2){
-            result.append(input.charAt(i));
-        }
-        System.out.println("every second letter: " +result);
+        String result = input.replaceAll("[aeiouAEIOU]","_");
+        System.out.println("the result string is : " +result);
     }
 }
