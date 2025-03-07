@@ -1,24 +1,21 @@
 package E5;
+
 import java.util.Scanner;
+
 public class practice {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("enter sequence of numbers.(enter -1 to stop.)");
-        int evenCount = 0;
-        int oddCount = 0;
-        boolean input= false;
-        while(true){
+        System.out.println("enter many numbers and enter -1 to stop: ");
+        int sum = 0;
+        while (scanner.hasNextInt()) {
             int num = scanner.nextInt();
-            if(num == -1){
+            if (num == -1) {
                 break;
-            }
-            if(num %2==0){
-                evenCount++;
-            }else {
-                oddCount++;
+            } else {
+                sum += num;
             }
         }
-        System.out.println("Even count: " +evenCount);
-        System.out.println("Odd count: " +oddCount);
+        System.out.println("the total amount of sum is: " + sum);
+        scanner.close();
     }
 }
