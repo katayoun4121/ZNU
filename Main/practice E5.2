@@ -3,25 +3,22 @@ import java.util.Scanner;
 public class practice {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("enter a sequence of numbers(enter -1 to stop):");
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
-        Boolean input = false;
-        while (true){
-            int current = scanner.nextInt();
-            if(current==-1){
+        System.out.println("enter sequence of numbers.(enter -1 to stop.)");
+        int evenCount = 0;
+        int oddCount = 0;
+        boolean input= false;
+        while(true){
+            int num = scanner.nextInt();
+            if(num == -1){
                 break;
             }
-            if(current< min){
-                min = current;
+            if(num %2==0){
+                evenCount++;
+            }else {
+                oddCount++;
             }
-            if(current > max){
-                max = current;
-            }
-            input = true;
         }
-        System.out.println("min: " +min);
-        System.out.println("max: " +max);
-        scanner.close();
+        System.out.println("Even count: " +evenCount);
+        System.out.println("Odd count: " +oddCount);
     }
 }
