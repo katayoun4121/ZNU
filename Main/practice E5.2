@@ -3,18 +3,25 @@ import java.util.Scanner;
 public class practice {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("enter a number:");
-        int num = scanner.nextInt();
-        scanner.close();
-        int sum = 0;
-        int temp = Math.abs(num);
-        while (temp>0){
-            int digit = temp % 10;
-            if(digit % 2 != 0){
-                sum +=digit;
+        System.out.println("enter a sequence of numbers(enter -1 to stop):");
+        int min = Integer.MAX_VALUE;
+        int max = Integer.MIN_VALUE;
+        Boolean input = false;
+        while (true){
+            int current = scanner.nextInt();
+            if(current==-1){
+                break;
             }
-            temp /= 10;
+            if(current< min){
+                min = current;
+            }
+            if(current > max){
+                max = current;
+            }
+            input = true;
         }
-        System.out.println("the sum of odd digits " + sum);
+        System.out.println("min: " +min);
+        System.out.println("max: " +max);
+        scanner.close();
     }
 }
